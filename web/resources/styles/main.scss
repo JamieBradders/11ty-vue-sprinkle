@@ -1,11 +1,35 @@
-// Toolkit Styles
-@import '~@stackupdigital/artemis-toolkit/scss/toolkit';
+// Tools
+@import '~@stackupdigital/artemis-toolkit/scss/tools/mq';
+@import '~@stackupdigital/artemis-toolkit/scss/tools/calculations';
 
-// Big no no, but we should apply
-// an option for padding
-.container {
-  padding: 0 1rem;
-}
+// Settings
+@import '~@stackupdigital/artemis-toolkit/scss/settings';
+@import 'settings/config';
 
-// Project Styles
+// Mixins
+@import '~@stackupdigital/artemis-toolkit/scss/mixins/col';
+@import '~@stackupdigital/artemis-toolkit/scss/mixins/colours';
+@import '~@stackupdigital/artemis-toolkit/scss/mixins/input';
+@import '~@stackupdigital/artemis-toolkit/scss/mixins/grid';
+
+// Generic
+@import '~@stackupdigital/artemis-toolkit/scss/base/normalize';
+@import '~@stackupdigital/artemis-toolkit/scss/base/generic';
+
+// Elements
 @import 'elements/image';
+
+// Layout
+@import '~@stackupdigital/artemis-toolkit/scss/layout/grid';
+@import '~@stackupdigital/artemis-toolkit/scss/layout/container';
+
+// Components
+@import '~@stackupdigital/artemis-toolkit/scss/components/button';
+@import '~@stackupdigital/artemis-toolkit/scss/components/card';
+@import '~@stackupdigital/artemis-toolkit/scss/components/hero';
+@import 'components/spinner';
+
+// Utils
+@import '~@stackupdigital/artemis-toolkit/scss/utils/flex';
+@import '~@stackupdigital/artemis-toolkit/scss/utils/text';
+@import '~@stackupdigital/artemis-toolkit/scss/utils/visibility';

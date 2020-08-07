@@ -2,20 +2,41 @@
 layout: layouts/_default.njk
 ---
 
+<div class="hero hero--medium">
+  <div class="hero__body">
+    <div class="container">
+      <h1 class="hero__title">11ty with Vue</h1>
+      <h2 class="hero__subtitle">Assets compiled with Laravel Mix</h2>
+    </div>
+  </div>
+</div>
+
 <main id="app">
   <div class="container">
-    <h1>Below is a lazy loaded image</h1>
+    <h2>Below is a lazy loaded image</h2>
     <p>Scroll down to see the lazy loading take place</p>
     
     <div class="grid spaced">
       {% for i in range(0, 4) %}
-        <div class="col-3">
-          <img
-            data-src="https://images.pexels.com/photos/164446/pexels-photo-164446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-            alt="Lazy Image"
-            class="is-lazy-js"
-            width="480"
-          />
+        <div class="col-12 md-col-4 lg-col-3">
+          <div class="card">
+            <div class="card__image">
+              <img data-src="https://images.pexels.com/photos/164446/pexels-photo-164446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  alt="Lazy Image"
+                  class="is-lazy-js"/>
+            </div>
+            <div class="card__content">
+              <p class="card__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+                iaculis mauris
+              </p>
+            </div>
+            <footer class="card__footer">
+              <div class="card__footer-item">
+                <a href="#" class="button is-primary is-full">Read More</a>
+              </div>
+            </footer>
+          </div>
         </div>
       {% endfor %}
     </div>

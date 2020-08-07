@@ -1,23 +1,26 @@
 <template>
   <section>
-    <h3>Launchpad Information</h3>
-    <div v-if="loading">Loading...</div>
+    <div class="section" v-if="loading">
+      <div class="sp sp-circle"></div>
+    </div>
 
-    <div v-else>
-      <p>{{ launch.details }}</p>
-      <ul>
-        <li>Flight Number: {{ launch.flight_number }}</li>
-        <li>Rocket: {{ launch.rocket }}</li>
-      </ul>
-
+    <div v-else class="section">
       <div class="grid spaced">
-        <div class="col">
+        <div class="col-3">
           <img
             :data-src="launch.links.patch.small"
             alt="Lazy Image"
             class="is-lazy-js"
             width="250"
           />
+        </div>
+
+        <div class="col">
+          <p>{{ launch.details }}</p>
+          <ul>
+            <li>Flight Number: {{ launch.flight_number }}</li>
+            <li>Rocket: {{ launch.rocket }}</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -49,7 +52,6 @@ export default {
 
           this.$nextTick(() => {
             LazyLoad().update()
-            LazyLoad().loadAll()
           })
         }, 2000)
       } else {
@@ -59,3 +61,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.section {
+  padding: 2rem 0 3rem;
+}
+</style>

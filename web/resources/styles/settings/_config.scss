@@ -1,0 +1,8 @@
+// Colours
+// This is the colour map that can be referenced
+$brand_colours: (
+  'primary': #089bd4,
+  'secondary': #fff
+);
+
+$colours: map-merge($colours, $brand_colours);

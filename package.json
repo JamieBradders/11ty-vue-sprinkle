@@ -28,7 +28,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
-    "@stackupdigital/artemis-toolkit": "^0.1.7",
+    "@stackupdigital/artemis-toolkit": "^0.2.0",
     "vanilla-lazyload": "^17.1.0",
     "vue": "^2.6.11"
   }
