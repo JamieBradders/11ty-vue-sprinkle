@@ -4,8 +4,8 @@
   "main": "js/main.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ELEVENTY_ENV=development eleventy --serve & webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "eleventy && NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "dev": "webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js & ELEVENTY_ENV=development eleventy --serve",
+    "prod": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && eleventy",
     "lint": "stylelint ./resources/styles/**/*.scss"
   },
   "husky": {

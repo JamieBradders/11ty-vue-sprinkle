@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Launchpad Information</h2>
+    <h3>Launchpad Information</h3>
 
     <div v-if="loading">Loading...</div>
 
@@ -13,7 +13,12 @@
 
       <div class="grid spaced">
         <div class="col">
-          <img :src="launch.links.patch.small" alt="Lazy Image" />
+          <img
+            :data-src="launch.links.patch.small"
+            alt="Lazy Image"
+            class="is-lazy-js"
+            width="250"
+          />
         </div>
       </div>
     </div>
@@ -21,6 +26,8 @@
 </template>
 
 <script>
+import LazyLoad from '../plugins/lazyload'
+
 export default {
   data() {
     return { launch: null, loading: true }
@@ -41,6 +48,11 @@ export default {
         setTimeout(() => {
           this.launch = json
           this.loading = false
+
+          this.$nextTick(() => {
+            LazyLoad().update()
+            LazyLoad().loadAll()
+          })
         }, 2000)
       } else {
         alert('There was a problem acquiring mission data')

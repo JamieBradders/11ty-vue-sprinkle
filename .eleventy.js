@@ -3,7 +3,7 @@
 module.exports = eleventyConfig => {
   // Include our static assets
   eleventyConfig.addPassthroughCopy({
-    'web/_assets': 'assets'
+    'web/includes/_assets': 'assets'
   })
 
   // Change the structure to make it easier to follow

@@ -5,13 +5,15 @@ const mix = require('laravel-mix')
 const paths = {
   scss: {
     source: './web/resources/styles/main.scss',
-    dest: './web/_assets/css/'
+    dest: './css/'
   },
   js: {
     source: './web/resources/js/main.js',
-    dest: './web/_assets/js/'
+    dest: './js/'
   }
 }
+
+mix.setPublicPath('./web/includes/_assets/')
 
 /**
  * If you want to create an import alias then you can do so by configuring
@@ -35,5 +37,5 @@ mix.sass(paths.scss.source, paths.scss.dest).js(paths.js.source, paths.js.dest)
 
 // If production, minify css/js
 if (mix.inProduction()) {
-  mix.minify(paths.scss.dest + 'main.css').minify(paths.js.dest + 'main.js')
+  mix.minify('./dist/assets/css/main.css').minify('./dist/assets/js/main.js')
 }
