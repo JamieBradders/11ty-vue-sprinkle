@@ -1,7 +1,6 @@
 <template>
   <section>
     <h3>Launchpad Information</h3>
-
     <div v-if="loading">Loading...</div>
 
     <div v-else>
@@ -41,7 +40,6 @@ export default {
     async fetchLaunch() {
       const res = await fetch(`https://api.spacexdata.com/v4/launches/latest`)
 
-      // If we are 'go' 😉
       if (res.ok) {
         const json = await res.json()
 

@@ -1,3 +1,11 @@
-// Styles go here
+// Toolkit Styles
 @import '~@stackupdigital/artemis-toolkit/scss/toolkit';
+
+// Big no no, but we should apply
+// an option for padding
+.container {
+  padding: 0 1rem;
+}
+
+// Project Styles
 @import 'elements/image';

@@ -3,7 +3,11 @@
 module.exports = eleventyConfig => {
   // Include our static assets
   eleventyConfig.addPassthroughCopy({
-    'web/includes/_assets': 'assets'
+    'web/resources/images': 'assets/images'
+  })
+
+  eleventyConfig.setBrowserSyncConfig({
+    files: ['dist/**/*']
   })
 
   // Change the structure to make it easier to follow

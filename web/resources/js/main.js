@@ -1,4 +1,3 @@
-// import LazyLoad from 'vanilla-lazyload'
 import Vue from 'vue'
 
 // Vue Components

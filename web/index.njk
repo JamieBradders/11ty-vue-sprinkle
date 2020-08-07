@@ -2,12 +2,11 @@
 layout: layouts/_default.njk
 ---
 
-<!-- Vue Wrapper -->
 <main id="app">
-  <!-- 11ty Code -->
   <div class="container">
     <h1>Below is a lazy loaded image</h1>
     <p>Scroll down to see the lazy loading take place</p>
+    
     <div class="grid spaced">
       {% for i in range(0, 4) %}
         <div class="col-3">
@@ -20,15 +19,11 @@ layout: layouts/_default.njk
         </div>
       {% endfor %}
     </div>
-
+    
     <h2>Dynamic data from SpaceX with lazy loading</h2>
-    <!-- Vue Component -->
-    <launchpad />
-    <!-- End of Vue Component -->
+    <launchpad></launchpad>
   </div>
-  <!-- End of 11ty Code -->
 </main>
-<!-- End of Vue Wrapper -->
 
 {% block scripts %}
   <script src="/assets/js/main.js"></script>
