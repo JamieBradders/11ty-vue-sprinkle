@@ -1,0 +1,34 @@
+---
+layout: layouts/_default.njk
+---
+
+<!-- Vue Wrapper -->
+<main id="app">
+  <!-- 11ty Code -->
+  <div class="container">
+    <h1>Below is a lazy loaded image</h1>
+    <p>Scroll down to see the lazy loading take place</p>
+    <div class="grid spaced">
+      {% for i in range(0, 4) %}
+        <div class="col-3">
+          <img
+            data-src="https://images.pexels.com/photos/164446/pexels-photo-164446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt="Lazy Image"
+            class="is-lazy-js"
+            width="480"
+          />
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Vue Component -->
+    <launchpad />
+    <!-- End of Vue Component -->
+  </div>
+  <!-- End of 11ty Code -->
+</main>
+<!-- End of Vue Wrapper -->
+
+{% block scripts %}
+  <script src="/assets/js/main.js"></script>
+{% endblock %}
