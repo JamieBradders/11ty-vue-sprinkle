@@ -6,4 +6,4 @@ Mix is an awesome tool, a wrapper around Webpack, it gives developers the abilit
 
 When testing out Mix, I learned that Mix will compile Vue components out of the box. So this got me thinking, how can I sprinkle Vue components in a 11ty website? It turns out you can do it rather effectively.
 
-> In a hurry? Check out the source code, you can also [view a live example of this example here](https://eager-cori-7ecef2.netlify.app/).
+> In a hurry? Check out the source code, you can also [view a demo of this example here](https://eager-cori-7ecef2.netlify.app/).
